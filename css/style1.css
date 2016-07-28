@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+a, a:active, a:link {
+color: #03B;
+text-decoration: none;
+}
+
+
+	/* jssor slider bullet navigator skin 11 css */
+	/*
+	.jssorb11 div           (normal)
+	.jssorb11 div:hover     (normal mouseover)
+	.jssorb11 .av           (active)
+	.jssorb11 .av:hover     (active mouseover)
+	.jssorb11 .dn           (mousedown)
+	*/
+	.jssorb11 div, .jssorb11 div:hover, .jssorb11 .av
+	{
+		background: url(../img/b11.png) no-repeat;
+		overflow:hidden;
+		cursor: pointer;
+	}
+	.jssorb11 div { background-position: -10px -10px; }
+	.jssorb11 div:hover, .jssorb11 .av:hover { background-position: -40px -10px; }
+	.jssorb11 .av { background-position: -70px -10px; }
+	.jssorb11 .dn, .jssorb11 .dn:hover { background-position: -100px -10px; }
+
+	/* jssor slider arrow navigator skin 14 css */
+	/*
+	.jssora14l              (normal)
+	.jssora14r              (normal)
+	.jssora14l:hover        (normal mouseover)
+	.jssora14r:hover        (normal mouseover)
+	.jssora14ldn            (mousedown)
+	.jssora14rdn            (mousedown)
+	*/
+	.jssora14l, .jssora14r, .jssora14ldn, .jssora14rdn{
+		position: absolute;
+		cursor: pointer;
+		display: block;
+		background: url(../img/a14.png) no-repeat;
+		overflow:hidden;
+	}
+	.jssora14l { background-position: -15px -35px; }
+	.jssora14r { background-position: -75px -35px; }
+	.jssora14l:hover { background-position: -135px -35px; }
+	.jssora14r:hover { background-position: -195px -35px; }
+	.jssora14ldn { background-position: -255px -35px; }
+	.jssora14rdn { background-position: -315px -35px; }
+	
+	.page{
+		border-radius: 3px;
+		padding: 5px 8px;
+		border: 1px solid #ededed;
+		background-color: #FFF;
+	}
+	.page:hover{
+		background-color: #03B;
+		color:#fff;
+	}
+	
+/* MOVIMIENTO DEL LOGO*/
+	
+/*movimiento del logo header*/
+.hovergallery img{
+-webkit-transform:scale(1); 
+-moz-transform:scale(1); 
+-o-transform:scale(1); 
+-ms-transform:scale(1); 
+-webkit-transition-duration: 0.8s; 
+-moz-transition-duration: 0.8s; 
+-o-transition-duration: 0.8s; 
+-ms-transition-duration: 0.8s;
+opacity: 0.9; /*Nivel de opacidad de las imágenes*/
+/*margin: 0 10px 20px 0; Margen entre las imágenes*/
+}
+
+.hovergallery img:hover{
+-webkit-transform:scale(0.8); /*Webkit: Escala de aumento de la imagen 1.2x tamaño original*/
+-moz-transform:scale(0.8); 
+-o-transform:scale(0.8); 
+-ms-transform:scale(0.8); 
+}
+
+/* menu superior*/
+nav.top-nav {
+  float: auto;
+  text-align: center;
+  max-width: auto;
+  margin-bottom: 5%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: auto;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 30px;
+  color: #169708;
+  /color: rgba(68,68,68,.5);*/ //*este es el color de las letras del menú*// 
+  color: rgba(255,255,255,.7);
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin-top: 0px;
+}
+
+nav ul li a:hover {
+  color: #D34317;
+}
+
+
+.width {
+  float: auto;
+  
+}
+
+.fw-portrait {
+  text-align: center;
+  vertical-align: middle;
+  /*padding: 1.5em 0; */
+}
+.fw-portrait img {
+  width: 220px;
+  border-radius: 50%;
+  border: 12px solid #c0392b;
+}
+
+.marg-20-bot {
+  margin-bottom: 5px;
+}
+  .mi-menu  {
+    border-radius: 5px;
+    list-style-type: none;
+    margin: center; /* si queremos centrarlo */
+    padding: 2px;
+    margin-top:62px;
+	margin-left:150px;
+    /* la altura y su ancho dependerán de los textos */
+    height: 40px; 
+    width: 465px;
+    /* el color de fondo */
+    background: #555;
+    background: -moz-linear-gradient(#555,#222);
+    background: -webkit-linear-gradient(#555,#222);
+    background: -o-linear-gradient(#555,#222);
+    background: -ms-linear-gradient(#555,#222);
+    background: linear-gradient(#555,#222);
+  }
+
+  /* cada item del menu */
+  .mi-menu  li {
+    display: block;
+    float: left; /* la lista se ve horizontal */
+    height:-72px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .mi-menu li a {
+    border-right: 1px solid #666;
+    color: #fff;
+    display: block;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    line-height:30px;
+    padding: 0 14px;
+    margin: 6px 0px;
+    text-decoration: none;
+    /* animamos el cambio de color de los textos */
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+  }
+  

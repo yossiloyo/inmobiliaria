@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+a, a:active, a:link {
+color: #03B;
+text-decoration: none;
+}
+
+
+	/* jssor slider bullet navigator skin 11 css */
+	/*
+	.jssorb11 div           (normal)
+	.jssorb11 div:hover     (normal mouseover)
+	.jssorb11 .av           (active)
+	.jssorb11 .av:hover     (active mouseover)
+	.jssorb11 .dn           (mousedown)
+	*/
+	.jssorb11 div, .jssorb11 div:hover, .jssorb11 .av
+	{
+		background: url(../img/b11.png) no-repeat;
+		overflow:hidden;
+		cursor: pointer;
+	}
+	.jssorb11 div { background-position: -10px -10px; }
+	.jssorb11 div:hover, .jssorb11 .av:hover { background-position: -40px -10px; }
+	.jssorb11 .av { background-position: -70px -10px; }
+	.jssorb11 .dn, .jssorb11 .dn:hover { background-position: -100px -10px; }
+
+	/* jssor slider arrow navigator skin 14 css */
+	/*
+	.jssora14l              (normal)
+	.jssora14r              (normal)
+	.jssora14l:hover        (normal mouseover)
+	.jssora14r:hover        (normal mouseover)
+	.jssora14ldn            (mousedown)
+	.jssora14rdn            (mousedown)
+	*/
+	.jssora14l, .jssora14r, .jssora14ldn, .jssora14rdn{
+		position: absolute;
+		cursor: pointer;
+		display: block;
+		background: url(../img/a14.png) no-repeat;
+		overflow:hidden;
+	}
+	.jssora14l { background-position: -15px -35px; }
+	.jssora14r { background-position: -75px -35px; }
+	.jssora14l:hover { background-position: -135px -35px; }
+	.jssora14r:hover { background-position: -195px -35px; }
+	.jssora14ldn { background-position: -255px -35px; }
+	.jssora14rdn { background-position: -315px -35px; }
+	
+	.page{
+		border-radius: 3px;
+		padding: 5px 8px;
+		border: 1px solid #ededed;
+		background-color: #FFF;
+	}
+	.page:hover{
+		background-color: #03B;
+		color:#fff;
+	}
