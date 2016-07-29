@@ -44,9 +44,9 @@ $hasta= $_GET['hasta'];
 
 <script src="js/jrsr.js"></script>
 
-<meta name="description" content="Venta o Alquiler de Inmuebles en Peru; Casas, Departamentos, Oficinas, Terrenos, Locales Comercial, Peru, Lima, El Callao, Miraflores"> 
+<meta name="description" content="Venta o Alquiler de Inmuebles en Peru; Casas, Departamentos, Oficinas, Terrenos, Locales Comercial, Peru, Lima, El Callao, Miraflores">
 
-<link rel="shortcut icon" href="../imagenes/icono.ico"> 
+<link rel="shortcut icon" href="../imagenes/icono.ico">
 
 <title>Inmuebles</title>
 
@@ -90,7 +90,7 @@ $hasta= $_GET['hasta'];
 
                     <a href="<?=$_SERVER['PHP_SELF']?>?idp=0&iddep=0&dep_iddep=0&tipo_operacion=0&tipo_inmueble=0&cod_oficina=0&id_agente=0&inicio=0&fin=16">Inicio</a>
 
-					<?php include ("inc/url_bar.php");?>                    
+					<?php include ("inc/url_bar.php");?>
 
                     <hr color="#EDEDED">
 
@@ -104,7 +104,7 @@ $hasta= $_GET['hasta'];
 
                 	<p style='font-weight:bold;'>Filtrar Propiedades por:</p>
 
-                   
+
 
 
 
@@ -136,7 +136,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 		$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-?>                    
+?>
 
 					<a href="<?=$_SERVER['PHP_SELF']?>?tipo_operacion=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -164,7 +164,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 	}
 
-	
+
 
 
 
@@ -172,7 +172,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 
 
-	
+
 
 	if(isset($_SESSION["tipo_inmueble"]) && $_SESSION["tipo_inmueble"] != ""){
 
@@ -180,7 +180,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 		$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-?>                    
+?>
 
 					<a href="<?=$_SERVER['PHP_SELF']?>?tipo_inmueble=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -216,7 +216,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 
 
-	
+
 
 
 
@@ -224,7 +224,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 
 
-	
+
 
 
 
@@ -234,7 +234,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 		$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-?>                    
+?>
 
 					<a href="<?=$_SERVER['PHP_SELF']?>?idp=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -264,7 +264,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 
 
-	
+
 
 
 
@@ -278,7 +278,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 		$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-?>                    
+?>
 
 					<a href="<?=$_SERVER['PHP_SELF']?>?iddep=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -320,7 +320,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 		$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-?>                    
+?>
 
 					<a href="<?=$_SERVER['PHP_SELF']?>?dep_iddep=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -362,9 +362,9 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 	    $row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-		
 
-?>                    
+
+?>
 
 					<a href="<?=$_SERVER['PHP_SELF']?>?cod_oficina=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -406,9 +406,9 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
         $row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-        
 
-?>                    
+
+?>
 
                     <a href="<?=$_SERVER['PHP_SELF']?>?id_agente=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
 
@@ -487,7 +487,7 @@ if($_SESSION["tipo_operacion"] == ""){
     if($_SESSION["id_agente"] != "")
 
         $query .= " AND cod_agente_captador_oficina1 = ".$_SESSION["id_agente_val"];
-		
+
 
     	$sql_inmueble = mysql_query("SELECT DISTINCT(i.tipo_operacion) FROM inmuebles i, tipo_operacion t WHERE i.status = 'Activa' $query AND i.tipo_operacion != '' and i.tipo_operacion=t.id_tipo_operacion order by t.nombre_tipo_operacion");
 
@@ -507,7 +507,7 @@ if($_SESSION["tipo_operacion"] == ""){
 
                             	<td>
 
-                                	<form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                	<form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                     	<select name="tipo_operacion" id="tipo_operacion" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -527,7 +527,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 	$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";	
+	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
@@ -545,7 +545,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 					</table>
 
-<?php 
+<?php
 
 
 
@@ -615,7 +615,7 @@ if($_SESSION["tipo_inmueble"] == ""){
 
                             	<td>
 
-                                	<form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                	<form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                     	<select name="tipo_inmueble" id="tipo_inmueble" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -633,7 +633,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 	$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";	
+	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
@@ -651,7 +651,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 					</table>
 
-<?php 
+<?php
 
 
 
@@ -721,7 +721,7 @@ if($_SESSION["idp"] == ""){
 
                             	<td>
 
-                                	<form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                	<form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                     	<select name="idp" id="idp" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -741,11 +741,11 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 	$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";	
+	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
-?>                      
+?>
 
 										</select>
 
@@ -821,13 +821,13 @@ if($_SESSION["iddep"] == ""){
 
                     <table width="100%	" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-top:10px;">
 
-                        <tbody> 
+                        <tbody>
 
                         	<tr>
 
                             	<td>
 
-                                	<form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                	<form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                     	<select name="iddep" id="iddep" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -847,11 +847,11 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 	$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[2])))." (".$row_inmueble_tot[0].")</option>";	
+	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[2])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
-?>                      
+?>
 
 										</select>
 
@@ -923,13 +923,13 @@ if($_SESSION["dep_iddep"] == ""){
 
                     <table width="100%	" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-top:5px;">
 
-                        <tbody> 
+                        <tbody>
 
                         	<tr>
 
                             	<td>
 
-                                	<form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                	<form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                     	<select name="dep_iddep" id="dep_iddep" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -949,11 +949,11 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 	$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[2])))." (".$row_inmueble_tot[0].")</option>";	
+	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[2])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
-?>                      
+?>
 
 										</select>
 
@@ -1021,7 +1021,7 @@ if($_SESSION["cod_oficina"] == ""){
 
 	if($row_inmueble > 0){ ?>
 
-			
+
 
                     <span style="font-weight:bold;font-size:13px;">Oficinas:</span>
 
@@ -1033,7 +1033,7 @@ if($_SESSION["cod_oficina"] == ""){
 
                             	<td>
 
-                                	<form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                	<form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                     	<select name="cod_oficina" id="cod_oficina" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -1053,7 +1053,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 	$row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";	
+	echo "									<option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[1])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
@@ -1071,7 +1071,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
 					</table>
 
-<?php 
+<?php
 
 
 
@@ -1135,7 +1135,7 @@ if($_SESSION["id_agente"] == ""){
 
                                 <td>
 
-                                    <form action="" method="get" onChange="submit()" style="width:186px;font-family:Times New Roman;font-size:16px;">
+                                    <form action="" method="get" style="width:186px;font-family:Times New Roman;font-size:16px;">
 
                                         <select name="id_agente" id="id_agente" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px;">
 
@@ -1155,7 +1155,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
     $row_inmueble_des = mysql_fetch_array($sql_inmueble_des);
 
-    echo "                                  <option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[2])))." (".$row_inmueble_tot[0].")</option>";   
+    echo "                                  <option value='".$row_inmueble[0]."'>".utf8_encode(ucwords(strtolower($row_inmueble_des[2])))." (".$row_inmueble_tot[0].")</option>";
 
 }
 
@@ -1173,7 +1173,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
                     </table>
 
-<?php 
+<?php
 
 
 
@@ -1206,9 +1206,9 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 			</tr>
 		</tbody>
 	</table>
-	
-	
-<br>	
+
+
+<br>
 
 <span style="font-weight:bold;font-size:13px;">Hasta:</span>
 	<table width="50%  " border="0" cellpadding="0" cellspacing="0" style="padding-top:5px;">
@@ -1218,8 +1218,8 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 					<input type="text" name="hasta" id="hasta" value="<?=$_GET['hasta']?>" style="border-radius:5px;padding:3px;font-size:14px;color:#333333;width:175px; background-color:orange;color:black;" readonly="readonly">
 				</tr></tr>
 		</tbody>
-	</table>	
-	
+	</table>
+
 
 
 
@@ -1230,7 +1230,7 @@ while($row_inmueble = mysql_fetch_array($sql_inmueble)){
 
                         <tbody>
 
-                        
+
 
 <?php
 
@@ -1311,7 +1311,7 @@ while($row = mysql_fetch_array($sql)){
 
 		echo "				<tr>";
 
-?>    
+?>
 
                       <td width="25%" align="center" style="vertical-align:top; padding-top:12px;">
 
@@ -1321,7 +1321,7 @@ while($row = mysql_fetch_array($sql)){
 
                                         <div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 210px; height: 210px;">
 
-               
+
 
 
 
@@ -1395,7 +1395,7 @@ $row_operacion = $row[5];
 
 
 
-	
+
 
 if($row[7] == '0')
 
@@ -1419,7 +1419,7 @@ for($i=1;$i<11;$i++){
 
 
 
-?>                                         
+?>
 
 
 
@@ -1465,7 +1465,7 @@ for($i=1;$i<11;$i++){
 
                                         <span style="color: #900;font-size: 16px;font-weight: bold;">
 
-                                       	US$ <?=number_format($precio,2)?> 
+                                       	US$ <?=number_format($precio,2)?>
 
 				    <br>S/     <?=number_format($row[86],2)?>
 
@@ -1539,7 +1539,7 @@ if($tot == 3)
 
 
 
-?>                      
+?>
 
 							</tr>
 
@@ -1573,7 +1573,7 @@ if($tot == 3)
 
             <tr>
 
-            	<td>            	
+            	<td>
 
                 </td>
 
@@ -1591,7 +1591,31 @@ if($tot == 3)
 
 	$("#page<?=$page?>").css("background-color","#03B").css("color","#fff");
 
+	$('form[method="get"]').on('change', function(e){
+		e.preventDefault();
+		var target = $(e.target),
+				newURL = updateURLParameter(window.location.href, target.attr('name'), target.val());
+				window.location.href = newURL;
+	});
+
+	function updateURLParameter(url, param, paramVal){
+    var newAdditionalURL = "";
+    var tempArray = url.split("?");
+    var baseURL = tempArray[0];
+    var additionalURL = tempArray[1];
+    var temp = "";
+    if (additionalURL) {
+        tempArray = additionalURL.split("&");
+        for (i=0; i<tempArray.length; i++){
+            if(tempArray[i].split('=')[0] != param){
+                newAdditionalURL += temp + tempArray[i];
+                temp = "&";
+            }
+        }
+    }
+
+    var rows_txt = temp + "" + param + "=" + paramVal;
+    return baseURL + "?" + newAdditionalURL + rows_txt;
+	}
+
 </script>
-
-
-
