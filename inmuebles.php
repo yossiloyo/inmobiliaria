@@ -150,7 +150,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                 <tr>
 
-                                    <td><?=utf8_encode(utf8_encode($row_inmueble_des[1]))?></td><td align="right"><img src="x.png" width="9" height="9" alt=""/> </td>
+                                    <td><?=utf8_encode(utf8_encode($row_inmueble_des[1]))?></td><td align="right"><img src="x.png" class="close" data-value="tipo_operacion" width="9" height="9" alt=""/> </td>
 
                                 </tr>
 
@@ -196,7 +196,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                     <td>
 
-										<?=utf8_encode(utf8_encode($row_inmueble_des[1]))?></td><td align="right"><img src="x.png" width="9" height="9" alt=""/>
+										<?=utf8_encode(utf8_encode($row_inmueble_des[1]))?></td><td align="right"><img class="close" data-value="tipo_inmueble" src="x.png" width="9" height="9" alt=""/>
 
 									</td>
 
@@ -248,7 +248,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                 <tr>
 
-                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))?></td><td align="right"><img src="x.png" width="9" height="9" alt="x"/> </td>
+                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))?></td><td align="right"><img class="close" data-value="idp" src="x.png" width="9" height="9" alt="x"/> </td>
 
                                 </tr>
 
@@ -292,7 +292,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                 <tr>
 
-                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[2])))?></td><td align="right"><img src="x.png" width="9" height="9" alt="x"/> </td>
+                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[2])))?></td><td align="right"><img class="close" data-value="iddep" src="x.png" width="9" height="9" alt="x"/> </td>
 
                                 </tr>
 
@@ -334,7 +334,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                 <tr>
 
-                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[2])))?></td><td align="right"><img src="x.png" width="9" height="9" alt="x"/> </td>
+                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[2])))?></td><td align="right"><img class="close" data-value="dep_iddep" src="x.png" width="9" height="9" alt="x"/> </td>
 
                                 </tr>
 
@@ -378,7 +378,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                 <tr>
 
-                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))?></td><td align="right"><img src="x.png" width="9" height="9" alt="x"/> </td>
+                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[1])))?></td><td align="right"><img class="close" data-value="cod_oficina" src="x.png" width="9" height="9" alt="x"/> </td>
 
                                 </tr>
 
@@ -422,7 +422,7 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
                                 <tr>
 
-                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[2])))?></td><td align="right"><img src="x.png" width="9" height="9" alt="x"/> </td>
+                                    <td><?=utf8_encode(ucfirst(strtolower($row_inmueble_des[2])))?></td><td align="right"><img class="close" data-value="id_agente" src="x.png" width="9" height="9" alt="x"/> </td>
 
                                 </tr>
 
@@ -1598,6 +1598,13 @@ if($tot == 3)
 				window.location.href = newURL;
 	});
 
+	$('img.close').on('click', function(e){
+		e.preventDefault();
+		var target = $(e.currentTarget);
+		target.closest('a').remove();
+		window.location.href = removeParams(window.location.href, target.data('value'));
+	});
+
 	function updateURLParameter(url, param, paramVal){
     var newAdditionalURL = "";
     var tempArray = url.split("?");
@@ -1617,5 +1624,27 @@ if($tot == 3)
     var rows_txt = temp + "" + param + "=" + paramVal;
     return baseURL + "?" + newAdditionalURL + rows_txt;
 	}
+
+	function removeParams(url, param){
+	  var parts = url.split('?'),
+	      newUrl = url;
+	  if (parts[1]){
+	    var params = parts[1].split('&'),
+	        items = [];
+	    for(var i = 0, len = params.length; i < len; i++){
+	      if (params[i].indexOf(param) === -1){
+	        items.push(params[i]);
+	      }
+	    }
+	    if (items.length){
+	      newUrl = parts[0] + '?' + items.join('&');
+	    }else{
+	      newUrl = parts[0];
+	    }
+	  }
+
+	  return newUrl;
+	}
+
 
 </script>
