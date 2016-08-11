@@ -1,7 +1,6 @@
 <?php
 session_start();
-
-
+session_destroy();
 
 /*echo "SESSION *****<br>  ";
 
@@ -138,8 +137,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-					<a href="<?=$_SERVER['PHP_SELF']?>?tipo_operacion=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+					<!--<a href="<?=$_SERVER['PHP_SELF']?>?tipo_operacion=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Operaci&oacute;n:</font>
 
                         <br/>
@@ -157,8 +156,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-					</a>
+						</div>
+					<!--</a>-->
 
 <?php
 
@@ -182,8 +181,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-					<a href="<?=$_SERVER['PHP_SELF']?>?tipo_inmueble=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+					<!--<a href="<?=$_SERVER['PHP_SELF']?>?tipo_inmueble=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Tipo:</font>
 
                         <br/>
@@ -205,8 +204,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-					</a>
+					</div>
+					<!--</a>-->
 
 
 
@@ -236,8 +235,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-					<a href="<?=$_SERVER['PHP_SELF']?>?idp=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+					<!--<a href="<?=$_SERVER['PHP_SELF']?>?idp=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Departamento:</font>
 
                         <br/>
@@ -255,8 +254,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-					</a>
+					</div>
+					<!--</a>-->
 
 <?php
 
@@ -280,8 +279,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-					<a href="<?=$_SERVER['PHP_SELF']?>?iddep=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+					<!--<a href="<?=$_SERVER['PHP_SELF']?>?iddep=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Provincia:</font>
 
                         <br/>
@@ -299,8 +298,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-					</a>
+					</div>
+					<!--</a>-->
 
 <?php
 
@@ -322,8 +321,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-					<a href="<?=$_SERVER['PHP_SELF']?>?dep_iddep=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+					<!--<a href="<?=$_SERVER['PHP_SELF']?>?dep_iddep=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Distrito:</font>
 
                         <br/>
@@ -341,8 +340,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-					</a>
+					</div>
+					<!--</a>-->
 
 <?php
 
@@ -366,8 +365,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-					<a href="<?=$_SERVER['PHP_SELF']?>?cod_oficina=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+					<!--<a href="<?=$_SERVER['PHP_SELF']?>?cod_oficina=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Oficina:</font>
 
                         <br/>
@@ -385,8 +384,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-					</a>
+					</div>
+					<!--</a>-->
 
 <?php
 
@@ -410,8 +409,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
 
 ?>
 
-                    <a href="<?=$_SERVER['PHP_SELF']?>?id_agente=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">
-
+                    <!--<a href="<?=$_SERVER['PHP_SELF']?>?id_agente=0&inicio=<?=$_SESSION['inicio']?>&fin=<?=$_SESSION['fin']?>" style="font-size:12px;text-decoration:none;color:#212121;">-->
+						<div>
                         <font color="gray">Agentes:</font>
 
                         <br/>
@@ -429,8 +428,8 @@ if($_SESSION["idp"] != "" || $_SESSION["iddep"] != "" || $_SESSION["dep_iddep"] 
                             </tbody>
 
                         </table>
-
-                    </a>
+					</div>
+                    <!--</a>-->
 
 <?php
 
@@ -1601,7 +1600,7 @@ if($tot == 3)
 	$('img.close').on('click', function(e){
 		e.preventDefault();
 		var target = $(e.currentTarget);
-		target.closest('a').remove();
+		target.closest('div').remove();
 		window.location.href = removeParams(window.location.href, target.data('value'));
 	});
 
